@@ -9,7 +9,7 @@
 	FILTER_SANITAZE_STRING);
 
 	// перевірки на довжину змінних
-	if(mb_strlen($login) < 5 || mb_strlen($login) > 90)
+	if(mb_strlen($login) < 5 || mb_strlen($login) > 25)
 	{
 		echo "Недопустима довжина логіна";
 		exit();
@@ -29,8 +29,8 @@
 	
 	// Підключка до sql
 	$mysql = new mysqli('localhost','root','root','register-bd');
-	$mysql->query("INSERT INTO `users`(`login`, `pass`, `mail`) 
-	VALUES('$login', '$pass', '$mail')");
+	$mysql->query("INSERT INTO `users`(`login`, `mail`, `pass`) 
+	VALUES('$login', '$mail', '$pass')");
 	$mysql->close();
 	header('Location: /');
 

@@ -400,7 +400,7 @@ li{
 }
 
 .account {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 .account__inner{
 	display: flex;
@@ -421,6 +421,7 @@ li{
 	padding: 64px;
 	background: #001119;
 	border-radius: 16px;
+	
 }
 .account-title {
 	font-weight: 500;
@@ -451,14 +452,15 @@ li{
 	line-height: 16px;
 	margin-bottom: 32px;
 	color: #7C7C8A;
+	font-family: 'Roboto', sans-serif;
 }
 .reg-input::placeholder{
 	font-size: 16px;
 	line-height: 16px;
 	color: #7C7C8A;
+	
 }
 .reg-btn {
-	margin-top: 32px;
 	margin-bottom: 32px;
 	display: flex;
 	justify-content: center;
@@ -488,4 +490,17 @@ li{
 }
 .reg-sign-link a:hover{
 	color: #750310;
+}
+.auth-sumbit{
+	padding: 12px 151px;
+	font-size: 14px;
+	line-height: 24px;
+	color: #FFFFFF;
+	background: #750310;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.auth-sumbit:hover{
+	background-color: #47080f;
 }
