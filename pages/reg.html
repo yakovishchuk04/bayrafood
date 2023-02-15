@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bayragood реєстрація</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<div class="account">
+		<div class="container">
+			<div class="account__inner">
+				<div class="account-logo">
+					<img src="../img/logo.png" alt="logo">
+				</div>
+				<div class="account__form">
+					<h1 class="account-title">Створіть обліковий запис</h1>
+					<form class="account-reg" action="../php/registration.php" method="post">
+						<div class="account-desc">Ваше ім’я</div>
+						<input type="text" class="reg-input" name="login" placeholder="Приклад : qwerty">
+						<div class="account-desc">Пошта</div>
+						<input type="email" class="reg-input" name="mail" placeholder="Приклад : qwerty@gmail.com">
+						<div class="account-desc">Пароль</div>
+						<input type="password" class="reg-input" name="pass" placeholder="Не менше 8 символів">
+						<div class="reg-btn">
+							<button type="submit" class="reg-sumbit">Створити обліковий запис</button>
+						</div>					
+						<div class="reg-sign-link">
+							<a href="#">У мене вже є обліковий запис</a>
+						</div>				
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

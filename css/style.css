@@ -33,7 +33,7 @@ li{
 .menu{
 
 }
-.menu_list{
+.menu__list{
 	display: flex;
 	justify-content: space-between;
 	align-self: center;
@@ -77,15 +77,16 @@ li{
 	position: relative;
 }
 .intro-title {
-	font-weight: 500px;
+	font-weight: 500;
 	font-size: 40px;
 	line-height: 56px;
+	margin-bottom: 10px;
 }
 .intro-desc {
 	max-width: 390px;
 	font-size: 16px;
-	line-height: 16px;
-	font-weight: 400px;
+	line-height: 20px;
+	font-weight: 400;
 	font-family: 'Roboto', sans-serif;
 }
 .food {
@@ -313,4 +314,178 @@ li{
 	font-size: 14px;
 	line-height: 22px;
 	font-weight: 400;
+}
+
+.main {
+	margin: 0 auto;
+	max-width: 1368px;
+	padding: 0 10px;
+	background-color: #000;
+	font-family: 'Poppins', sans-serif;
+}
+.main__inner {
+	margin: 0 auto;
+	max-width: 1140px;
+	padding: 0 10px;
+	padding-bottom: 155px;
+}
+.main-back {
+	font-weight: 700px;
+	font-size: 24px;
+	line-height: 33.6px;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+.main-back:hover{
+	color:#750310;
+}
+.main__content {
+	margin-top: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.main-img {
+	margin-right: 48px;
+}
+.main-img img{
+	width: 300px;
+}
+.main__text {
+}
+.main-title {
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 56px;
+	margin-bottom: 24px;
+}
+.main-desc {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 33.6px;	
+	margin-bottom: 24px;
+	
+}
+.main__list {
+	display: flex;
+	align-items: center;
+	margin-bottom: 48px;
+}
+.main__list-item {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 24px;
+	padding: 4px 8px;
+	background: #192227;
+	border-radius: 5px;
+}
+.main__list-item + .main__list-item{
+	margin-left: 12px;
+}
+.main-btn {
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 500;
+	padding: 14px 24px;
+	background-color: #750310;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.main-btn:hover{
+	background-color: #47080f;
+}
+.food-header{
+	padding-bottom: 40px;
+}
+
+.account {
+	font-family: 'Poppins', sans-serif;
+}
+.account__inner{
+	display: flex;
+	justify-content: space-around;
+	background-color: #000;
+	align-items: center;
+	padding: 80px;
+}
+.account-logo {
+}
+.account__form {
+	width: 100%;
+	max-width: 476px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-self: center;
+	padding: 64px;
+	background: #001119;
+	border-radius: 16px;
+}
+.account-title {
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 44.8px;
+	margin-bottom: 32px;
+	text-align: center;
+}
+.account-reg {
+
+}
+.account-desc {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 16px;
+	margin-bottom: 8px;
+	color: #C4C4CC;
+}
+.reg-input {
+	max-width: 358px;
+	width: 100%;
+	padding: 14px 16px;
+	height: 48px;
+	background: #0D1D25;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	line-height: 16px;
+	margin-bottom: 32px;
+	color: #7C7C8A;
+}
+.reg-input::placeholder{
+	font-size: 16px;
+	line-height: 16px;
+	color: #7C7C8A;
+}
+.reg-btn {
+	margin-top: 32px;
+	margin-bottom: 32px;
+	display: flex;
+	justify-content: center;
+}
+.reg-sumbit{
+	padding: 12px 83px;
+	font-size: 14px;
+	line-height: 24px;
+	color: #FFFFFF;
+	background: #750310;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.reg-sumbit:hover{
+	background-color: #47080f;
+}
+.reg-sign-link{
+	display: flex;
+	justify-content: center;
+}
+.reg-sign-link a{
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 500;
+	transition: all 0.3s;
+}
+.reg-sign-link a:hover{
+	color: #750310;
 }
