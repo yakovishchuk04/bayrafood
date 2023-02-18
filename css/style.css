@@ -30,9 +30,6 @@ li{
 	background-color: #00111A;
 	padding: 0 35px;
 }
-.menu{
-
-}
 .menu__list{
 	display: flex;
 	justify-content: space-between;
@@ -351,8 +348,6 @@ li{
 .main-img img{
 	width: 300px;
 }
-.main__text {
-}
 .main-title {
 	font-weight: 500;
 	font-size: 40px;
@@ -409,8 +404,6 @@ li{
 	align-items: center;
 	padding: 80px;
 }
-.account-logo {
-}
 .account__form {
 	width: 100%;
 	max-width: 476px;
@@ -430,9 +423,7 @@ li{
 	margin-bottom: 32px;
 	text-align: center;
 }
-.account-reg {
 
-}
 .account-desc {
 	font-weight: 400;
 	font-size: 16px;
@@ -503,4 +494,90 @@ li{
 }
 .auth-sumbit:hover{
 	background-color: #47080f;
+}
+.popup{
+	position: absolute;
+	width: 490px;
+	height: 325px;
+	background-color: #0D1D25;
+	top: 25%;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 15px;
+	transition: all 0.7s;
+	display: none;
+}
+.popup-wrapper{
+	display: flex;
+	justify-content: center;
+}
+.popup-form {
+	padding: 15px;
+}
+.popup-title {
+	text-align: center;
+	margin-top: 25px;
+	font-size: 30px;
+	line-height: 30px;
+	margin-bottom: 25px;
+}
+.popup-input{
+	max-width: 370px;
+	width: 100%;
+	padding: 14px 16px;
+	height: 48px;
+	background: #0D1D25;
+	border: 1px #fff solid;
+	border-radius: 8px;
+	font-size: 16px;
+	line-height: 16px;
+	color: #7C7C8A;
+}
+.popup-address {
+	margin-bottom: 15px;
+}
+.popup-card{
+	margin-bottom: 25px;
+}
+.popup-btn{
+	display: flex;
+	justify-content: center;
+}
+.popup-submit {
+	padding: 12px 151px;
+	font-size: 14px;
+	line-height: 24px;
+	color: #FFFFFF;
+	background: #750310;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.popup-submit:hover{
+	background-color: #47080f;
+}
+.popup-close-btn{
+	position: absolute;
+	top: 25px;
+	right: 35px;
+	background-color: inherit;
+	border: none;
+}
+.popup-close-btn::before, .popup-close-btn::after{
+	content: "";
+	position: absolute;
+	width: 24px;
+	height: 4px;
+	background: #750310;
+	cursor: pointer;
+	border: none;
+}
+.popup-close-btn::before{
+	transform: rotate(45deg);
+}
+.popup-close-btn::after{
+	transform: rotate(-45deg);
+}
+.popup-visible{
+	display: block;
 }
