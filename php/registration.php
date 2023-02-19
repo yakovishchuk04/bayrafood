@@ -1,13 +1,12 @@
 <?php
 	// щоб працювало потрібно у форму поставити method="post" і action="registration.php"
 	// чистка змінних від лишнього
-	$login = filter_var(trim($_POST['login']) 
-	FILTER_SANITAZE_STRING);
-	$name = filter_var(trim($_POST['mail'])
-	FILTER_SANITAZE_STRING);
-	$pass = filter_var(trim($_POST['pass'])
-	FILTER_SANITAZE_STRING);
-
+	$login = filter_var(trim($_POST['login']),
+	FILTER_SANITIZE_STRING);
+	$mail = filter_var(trim($_POST['mail']),
+	FILTER_SANITIZE_EMAIL);
+	$pass = filter_var(trim($_POST['pass']),
+	FILTER_SANITIZE_STRING);
 	// перевірки на довжину змінних
 	if(mb_strlen($login) < 5 || mb_strlen($login) > 25)
 	{
@@ -21,17 +20,16 @@
 	}
 	else if (mb_strlen($pass) < 8 || mb_strlen($pass) > 16)
 	{
-		echo "Недопустима довжина пароля (від 8 до 16 символів)"
+		echo "Недопустима довжина пароля (від 8 до 16 символів)";
 		exit(); 
 	}
 	// хеш
 	$pass = md5($pass."skfn2a41"); 
 	
 	// Підключка до sql
-	$mysql = new mysqli('localhost','root','root','register-bd');
+	$mysql = new mysqli('127.0.0.1','root','','register-bd');
 	$mysql->query("INSERT INTO `users`(`login`, `mail`, `pass`) 
 	VALUES('$login', '$mail', '$pass')");
 	$mysql->close();
 	header('Location: /');
-
 ?>
