@@ -252,7 +252,7 @@
 					
 					<div class="food__slider-item">
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-img"><img src="img/food-8.png" alt="image"></a>
+							<a href="#" class="slider-item-img"><img src="img/food-12.png" alt="image"></a>
 						</div>
 						<div class="slider-links-center">
 							<a href="#" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
