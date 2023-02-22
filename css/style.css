@@ -445,6 +445,16 @@ li{
 
 .account {
 	font-family: 'Roboto', sans-serif;
+	margin: 0 auto;
+	max-width: 1388px;
+	padding: 0 10px;
+	background-color: #000;
+}
+.auth-reg{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 }
 .account__inner{
 	display: flex;
@@ -453,7 +463,7 @@ li{
 	align-items: center;
 	padding: 80px;
 }
-.account__form {
+.auth-form {
 	width: 100%;
 	max-width: 476px;
 	display: flex;
@@ -463,6 +473,14 @@ li{
 	padding: 64px;
 	background: #001119;
 	border-radius: 16px;
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 50;
+	transition: all 5s;
+	display: none;
+	animation: burgerAnimation 0.4s;
 	
 }
 .account-title {
@@ -481,7 +499,6 @@ li{
 	color: #C4C4CC;
 }
 .reg-input {
-	max-width: 358px;
 	width: 100%;
 	padding: 14px 16px;
 	height: 48px;
@@ -493,6 +510,7 @@ li{
 	margin-bottom: 32px;
 	color: #7C7C8A;
 	font-family: 'Roboto', sans-serif;
+
 }
 .reg-input::placeholder{
 	font-size: 16px;
@@ -506,7 +524,7 @@ li{
 	justify-content: center;
 }
 .reg-sumbit{
-	padding: 12px 83px;
+	padding: 12px 10px;
 	font-size: 14px;
 	line-height: 24px;
 	color: #FFFFFF;
@@ -514,6 +532,7 @@ li{
 	border-radius: 5px;
 	cursor: pointer;
 	transition: all 0.3s;
+	width: 100%;
 }
 .reg-sumbit:hover{
 	background-color: #47080f;
@@ -631,7 +650,12 @@ li{
 .popup-visible{
 	display: block;
 }
-
+.reg-account{
+	cursor: pointer;
+}
+.reg-account--active{
+	display: block;
+}
 /* adaptive*/
 @media(max-width: 1100px){
 	.intro__img{
@@ -656,6 +680,9 @@ li{
 	}
 	.intro-title{
 		line-height: 35px;
+	}
+	.account-logo{
+		display: none;
 	}
 }
 @media(max-width: 868px){
@@ -747,6 +774,9 @@ li{
 	.intro__inner{
 		padding-top: 200px;
 	}
+	.header{
+		padding-bottom: 100px;
+	}
 }
 @media(max-width: 630px){
 	.slider-item-title{
@@ -781,8 +811,16 @@ li{
 	.header__inner{
 		padding: 0;
 	}
+	.account__inner {
+		padding: 10px;
+	}
 	
 	
+}
+@media(max-width: 580px){
+	.header{
+		padding-bottom: 0px;
+	}
 }
 @media(max-width: 500px){
 	.resp__item{
@@ -804,6 +842,20 @@ li{
 	.intro-desc{
 		font-size: 14px;
 		line-height: 17px;
+	}
+	.popup{
+		width: 100%;
+	}
+	.popup-submit{
+		padding: 12px 10px;
+		width: 100%;
+	}
+	.auth-form{
+		padding: 5px;
+	}
+	.auth-sumbit{
+		padding: 12px 127px;
+
 	}
 }
 @media(max-width: 400px){

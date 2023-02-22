@@ -55,7 +55,7 @@ INSERT INTO `food` (`id`, `name`, `price`, `description`) VALUES
 --
 -- Індекси збережених таблиць
 --
-
+INSERT INTO `users` (`login`, `mail`, `pass`) VALUES ('qwerty','qwertyywwtwtwt','12121212');
 --
 -- Індекси таблиці `food`
 --

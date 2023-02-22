@@ -27,9 +27,12 @@ $(function(){
 			$('.resp-title').on('click', function(){
 				$('.resp-text').toggleClass('resp-text--active'),
 				$('.resp__item').toggleClass('resp__item--active')
-		 });
-		 $('.menu__btn').on('click', function(){
-			$('.menu__btn').toggleClass('menu__btn--active'),
-			$('.menu__list').toggleClass('menu__list--active')
-	 });
+		 	});
+			$('.menu__btn').on('click', function(){
+				$('.menu__btn').toggleClass('menu__btn--active'),
+				$('.menu__list').toggleClass('menu__list--active')
+			});
+			$('.reg-account').on('click', function(){
+				$('.auth-form').toggleClass('reg-account--active')
+			});
 });

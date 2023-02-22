@@ -42,12 +42,33 @@
 					</ul>
 				</nav>
 				<div class="reg__link"> 
-					<!-- php -->
-					 <a class="reg__link-reg" href="pages/auth.html"><img src="img/account.png" alt="account"></a>
+					<?php
+						if($_COOKIE['user'] == ''):
+					?>
+							<img class="reg-account" src="img/account.png" alt="acc">
+					
+					<?php else: ?>
+						<a class="account-exit" href="php/exit.php"><img src="img/SignOut.png" alt="exit"></a>
+						<?php endif;?> 
 				</div>
 			</div>
 		</div>
 	</header>
+	<div class="auth-form">
+		<h1 class="account-title">Увійти</h1>
+		<form class="auth-reg" action="../php/auth.php" method="post">
+			<div class="account-desc">Логін</div>
+			<input type="text" class="reg-input" name="login" placeholder="Приклад: qwerty">
+			<div class="account-desc">Пароль</div>
+			<input type="password" class="reg-input" name="pass" placeholder="Не менше 8 символів">
+			<div class="reg-btn">
+				<button type="submit" class="auth-sumbit">Увійти</button>
+			</div>					
+			<div class="reg-sign-link">
+				<a href="pages/reg.html">Створити аккаунт</a>
+			</div>				
+		</form>
+	</div>
 <main>
 <section class="intro">
 		<div class="container">
@@ -86,49 +107,49 @@
 
 					<div class="food__slider-item">
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-img"><img src="img/food-2.png" alt="image"></a>
+							<a href="pages/food-2.html" class="slider-item-img"><img src="img/food-2.png" alt="image"></a>
 						</div>
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
+							<a href="pages/food-2.html" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
 						</div>
 						<div class="slider-item-desc">
 							<div class="slider-item-text"><?php $desc = mysqli_fetch_assoc($result2); echo $desc['description'];?></div>
 						</div>
 						<div class="slider-item-price"><?php $price = mysqli_fetch_assoc($result3); echo $price['price'];?> ₴</div>
 						<div class="slider-item-buy slider-links-center">
-							<a href="#" class="slider-item-btn">Замовити</a>
+							<a href="pages/food-2.html" class="slider-item-btn">Замовити</a>
 						</div>
 					</div>
 
 					<div class="food__slider-item">
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-img"><img src="img/food-3.png" alt="image"></a>
+							<a href="pages/food-3.html" class="slider-item-img"><img src="img/food-3.png" alt="image"></a>
 						</div>
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
+							<a href="pages/food-3.html" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
 						</div>
 						<div class="slider-item-desc">
 							<div class="slider-item-text"><?php $desc = mysqli_fetch_assoc($result2); echo $desc['description'];?></div>
 						</div>
 						<div class="slider-item-price"><?php $price = mysqli_fetch_assoc($result3); echo $price['price'];?> ₴</div>
 						<div class="slider-item-buy slider-links-center">
-							<a href="#" class="slider-item-btn">Замовити</a>
+							<a href="pages/food-3.html" class="slider-item-btn">Замовити</a>
 						</div>
 					</div>
 
 					<div class="food__slider-item">
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-img"><img src="img/food-4.png" alt="image"></a>
+							<a href="pages/food-4.html" class="slider-item-img"><img src="img/food-4.png" alt="image"></a>
 						</div>
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
+							<a href="pages/food-4.html" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
 						</div>
 						<div class="slider-item-desc">
 							<div class="slider-item-text"><?php $desc = mysqli_fetch_assoc($result2); echo $desc['description'];?></div>
 						</div>
 						<div class="slider-item-price"><?php $price = mysqli_fetch_assoc($result3); echo $price['price'];?> ₴</div>
 						<div class="slider-item-buy slider-links-center">
-							<a href="#" class="slider-item-btn">Замовити</a>
+							<a href="pages/food-4.html" class="slider-item-btn">Замовити</a>
 						</div>
 					</div>
 				</div>
@@ -137,65 +158,65 @@
 				<div class="food__slider">
 					<div class="food__slider-item">
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-img"><img src="img/food-5.png" alt="image"></a>
+							<a href="pages/food-5.html" class="slider-item-img"><img src="img/food-5.png" alt="image"></a>
 						</div>
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
+							<a href="pages/food-5.html" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
 						</div>
 						<div class="slider-item-desc">
 							<div class="slider-item-text"><?php $desc = mysqli_fetch_assoc($result2); echo $desc['description'];?></div>
 						</div>
 						<div class="slider-item-price"><?php $price = mysqli_fetch_assoc($result3); echo $price['price'];?> ₴</div>
 						<div class="slider-item-buy slider-links-center">
-							<a href="#" class="slider-item-btn">Замовити</a>
+							<a href="pages/food-5.html" class="slider-item-btn">Замовити</a>
 						</div>
 					</div>
 
 					<div class="food__slider-item">
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-img"><img src="img/food-6.png" alt="image"></a>
+							<a href="pages/food-6.html" class="slider-item-img"><img src="img/food-6.png" alt="image"></a>
 						</div>
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
+							<a href="pages/food-6.html" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
 						</div>
 						<div class="slider-item-desc">
 							<div class="slider-item-text"><?php $desc = mysqli_fetch_assoc($result2); echo $desc['description'];?></div>
 						</div>
 						<div class="slider-item-price"><?php $price = mysqli_fetch_assoc($result3); echo $price['price'];?> ₴</div>
 						<div class="slider-item-buy slider-links-center">
-							<a href="#" class="slider-item-btn">Замовити</a>
+							<a href="pages/food-6.html" class="slider-item-btn">Замовити</a>
 						</div>
 					</div>
 
 					<div class="food__slider-item">
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-img"><img src="img/food-7.png" alt="image"></a>
+							<a href="pages/food-7.html" class="slider-item-img"><img src="img/food-7.png" alt="image"></a>
 						</div>
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
+							<a href="pages/food-7.html" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
 						</div>
 						<div class="slider-item-desc">
 							<div class="slider-item-text"><?php $desc = mysqli_fetch_assoc($result2); echo $desc['description'];?></div>
 						</div>
 						<div class="slider-item-price"><?php $price = mysqli_fetch_assoc($result3); echo $price['price'];?> ₴</div>
 						<div class="slider-item-buy slider-links-center">
-							<a href="#" class="slider-item-btn">Замовити</a>
+							<a href="pages/food-7.html" class="slider-item-btn">Замовити</a>
 						</div>
 					</div>
 
 					<div class="food__slider-item">
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-img"><img src="img/food-8.png" alt="image"></a>
+							<a href="pages/food-8.html" class="slider-item-img"><img src="img/food-8.png" alt="image"></a>
 						</div>
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
+							<a href="pages/food-8.html" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
 						</div>
 						<div class="slider-item-desc">
 							<div class="slider-item-text"><?php $desc = mysqli_fetch_assoc($result2); echo $desc['description'];?></div>
 						</div>
 						<div class="slider-item-price"><?php $price = mysqli_fetch_assoc($result3); echo $price['price'];?> ₴</div>
 						<div class="slider-item-buy slider-links-center">
-							<a href="#" class="slider-item-btn">Замовити</a>
+							<a href="pages/food-8.html" class="slider-item-btn">Замовити</a>
 						</div>
 					</div>
 				</div>	
@@ -204,65 +225,65 @@
 				<div class="food__slider">
 					<div class="food__slider-item">
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-img"><img src="img/food-9.png" alt="image"></a>
+							<a href="pages/food-9.html" class="slider-item-img"><img src="img/food-9.png" alt="image"></a>
 						</div>
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
+							<a href="pages/food-9.html" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
 						</div>
 						<div class="slider-item-desc">
 							<div class="slider-item-text"><?php $desc = mysqli_fetch_assoc($result2); echo $desc['description'];?></div>
 						</div>
 						<div class="slider-item-price"><?php $price = mysqli_fetch_assoc($result3); echo $price['price'];?> ₴</div>
 						<div class="slider-item-buy slider-links-center">
-							<a href="#" class="slider-item-btn">Замовити</a>
+							<a href="pages/food-9.html" class="slider-item-btn">Замовити</a>
 						</div>
 					</div>
 
 					<div class="food__slider-item">
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-img"><img src="img/food-10.png" alt="image"></a>
+							<a href="pages/food-10.html" class="slider-item-img"><img src="img/food-10.png" alt="image"></a>
 						</div>
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
+							<a href="pages/food-10.html" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
 						</div>
 						<div class="slider-item-desc">
 							<div class="slider-item-text"><?php $desc = mysqli_fetch_assoc($result2); echo $desc['description'];?></div>
 						</div>
 						<div class="slider-item-price"><?php $price = mysqli_fetch_assoc($result3); echo $price['price'];?> ₴</div>
 						<div class="slider-item-buy slider-links-center">
-							<a href="#" class="slider-item-btn">Замовити</a>
+							<a href="pages/food-10.html" class="slider-item-btn">Замовити</a>
 						</div>
 					</div>
 
 					<div class="food__slider-item">
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-img"><img src="img/food-11.png" alt="image"></a>
+							<a href="pages/food-11.html" class="slider-item-img"><img src="img/food-11.png" alt="image"></a>
 						</div>
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
+							<a href="pages/food-11.html" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
 						</div>
 						<div class="slider-item-desc">
 							<div class="slider-item-text"><?php $desc = mysqli_fetch_assoc($result2); echo $desc['description'];?></div>
 						</div>
 						<div class="slider-item-price"><?php $price = mysqli_fetch_assoc($result3); echo $price['price'];?> ₴</div>
 						<div class="slider-item-buy slider-links-center">
-							<a href="#" class="slider-item-btn">Замовити</a>
+							<a href="pages/food-11.html" class="slider-item-btn">Замовити</a>
 						</div>
 					</div>
 					
 					<div class="food__slider-item">
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-img"><img src="img/food-12.png" alt="image"></a>
+							<a href="pages/food-12.html" class="slider-item-img"><img src="img/food-12.png" alt="image"></a>
 						</div>
 						<div class="slider-links-center">
-							<a href="#" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
+							<a href="pages/food-12.html" class="slider-item-title"><?php $title = mysqli_fetch_assoc($result1); echo $title['name'];?></a>
 						</div>
 						<div class="slider-item-desc">
 							<div class="slider-item-text"><?php $desc = mysqli_fetch_assoc($result2); echo $desc['description'];?></div>
 						</div>
 						<div class="slider-item-price"><?php $price = mysqli_fetch_assoc($result3); echo $price['price'];?> ₴</div>
 						<div class="slider-item-buy slider-links-center">
-							<a href="#" class="slider-item-btn">Замовити</a>
+							<a href="pages/food-12.html" class="slider-item-btn">Замовити</a>
 						</div>
 					</div>
 				</div>	
