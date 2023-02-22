@@ -7,7 +7,7 @@
 
 <!DOCTYPE html>
 <html>
-
+	
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,30 +45,30 @@
 					<?php
 						if($_COOKIE['user'] == ''):
 					?>
-							<img class="reg-account" src="img/account.png" alt="acc">
-					
+					<img class="reg-account" src="img/account.png" alt="acc">	
+					<div class="auth-form">
+						<h1 class="account-title">Увійти</h1>
+						<form	form class="auth-reg" action="php/auth.php" method="post">
+						<div class="account-desc">Логін</div>
+						<input type="text" class="reg-input" name="login" placeholder="Приклад: qwerty">
+						<div class="account-desc">Пароль</div>
+						<input type="password" class="reg-input" name="pass" placeholder="Не менше 8 символів">
+				<div class="reg-btn">
+					<button type="submit" class="auth-sumbit">Увійти</button>
+				</div>					
+				<div	div class="reg-sign-link">
+					<a href="pages/reg.html">Створити аккаунт</a>
+				</div>				
+				</form>
+			</div>		
 					<?php else: ?>
 						<a class="account-exit" href="php/exit.php"><img src="img/SignOut.png" alt="exit"></a>
-						<?php endif;?> 
+					<?php endif;?> 
 				</div>
 			</div>
 		</div>
 	</header>
-	<div class="auth-form">
-		<h1 class="account-title">Увійти</h1>
-		<form class="auth-reg" action="../php/auth.php" method="post">
-			<div class="account-desc">Логін</div>
-			<input type="text" class="reg-input" name="login" placeholder="Приклад: qwerty">
-			<div class="account-desc">Пароль</div>
-			<input type="password" class="reg-input" name="pass" placeholder="Не менше 8 символів">
-			<div class="reg-btn">
-				<button type="submit" class="auth-sumbit">Увійти</button>
-			</div>					
-			<div class="reg-sign-link">
-				<a href="pages/reg.html">Створити аккаунт</a>
-			</div>				
-		</form>
-	</div>
+
 <main>
 <section class="intro">
 		<div class="container">

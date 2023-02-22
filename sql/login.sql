@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Час створення: Лют 19 2023 р., 10:16
+-- Час створення: Лют 22 2023 р., 21:08
 -- Версія сервера: 8.0.30
 -- Версія PHP: 7.2.34
 
@@ -31,7 +31,7 @@ CREATE TABLE `login` (
   `id` int UNSIGNED NOT NULL,
   `login` varchar(25) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   `mail` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
-  `pass` varchar(16) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL
+  `pass` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 --
