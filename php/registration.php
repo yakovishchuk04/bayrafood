@@ -1,10 +1,6 @@
 <?php
 	// щоб працювало потрібно у форму поставити method="post" і action="registration.php"
-	$par1_ip = "127.0.0.1";
-	$par2_name = "root";
-	$par3_p = "";
-	$par4_db = "register-bd";
-	
+	include "databases.php";
 	// чистка змінних від лишнього
 	$login = filter_var(trim($_POST['login']), FILTER_SANITIZE_STRING);
 	$mail = filter_var(trim($_POST['mail']), FILTER_SANITIZE_STRING);

@@ -1,9 +1,6 @@
 <?php
 	// щоб працювало потрібно у форму поставити method="post" і action="auth.php"
-	$par1_ip = "127.0.0.1";
-	$par2_name = "root";
-	$par3_p = "";
-	$par4_db = "register-bd";
+	include "databases.php";
 	
 	$login = filter_var(trim($_POST['login']), FILTER_SANITIZE_STRING);
 	$pass = filter_var(trim($_POST['pass']), FILTER_SANITIZE_STRING);

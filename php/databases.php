@@ -1,5 +1,5 @@
 <?php
-	$par1_ip = "127.0.0.1";
+	$par1_ip = "31.128.253.202";
 	$par2_name = "root";
 	$par3_p = "";
 	$par4_db = "register-bd";
